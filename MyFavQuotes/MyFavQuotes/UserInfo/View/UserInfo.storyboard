@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Info View Controller-->
+        <scene sceneID="e8w-Tg-GpN">
+            <objects>
+                <viewController storyboardIdentifier="UserInfoViewController" id="reQ-qY-Kev" customClass="UserInfoViewController" customModule="MyFavQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bqC-Ae-Xhz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="TC2-bI-RAG">
+                                <rect key="frame" x="30" y="64" width="354" height="698"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jo9-9A-XlE">
+                                        <rect key="frame" x="0.0" y="1.5" width="354" height="334.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="ApU-e2-S1C">
+                                        <rect key="frame" x="0.0" y="361" width="354" height="337"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNC-RQ-Jy3">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="258"/>
+                                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tDu-xv-4vG">
+                                                <rect key="frame" x="0.0" y="303" width="354" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCt-ai-OM3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="aoC-vw-ooo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="23"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqA-wA-IBO" customClass="RoundButton" customModule="poto" customModuleProvider="target">
+                                                        <rect key="frame" x="115" y="0.0" width="239" height="34"/>
+                                                        <color key="backgroundColor" red="0.36396887900000002" green="0.22421401739999999" blue="0.93338888880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" priority="999" constant="150" id="7JS-fK-lV2"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
+                                                        <state key="normal" title="See FavQs">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TC2-bI-RAG" firstAttribute="leading" secondItem="Z3Y-jm-eCM" secondAttribute="leading" constant="30" id="RJ4-gZ-tcm"/>
+                            <constraint firstItem="TC2-bI-RAG" firstAttribute="top" secondItem="Z3Y-jm-eCM" secondAttribute="top" constant="20" id="eNG-iD-uuC"/>
+                            <constraint firstItem="Z3Y-jm-eCM" firstAttribute="trailing" secondItem="TC2-bI-RAG" secondAttribute="trailing" constant="30" id="r7V-PO-q5b"/>
+                            <constraint firstItem="Z3Y-jm-eCM" firstAttribute="bottom" secondItem="TC2-bI-RAG" secondAttribute="bottom" constant="100" id="zug-oL-ADQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Z3Y-jm-eCM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w8V-fR-cqP"/>
+                    <connections>
+                        <outlet property="countOfFavQuotes" destination="DCt-ai-OM3" id="te1-9U-mL2"/>
+                        <outlet property="imageUser" destination="Jo9-9A-XlE" id="csY-Uy-Ee5"/>
+                        <outlet property="nickname" destination="oNC-RQ-Jy3" id="Skr-xU-KqT"/>
+                        <outlet property="seeFavorite" destination="IqA-wA-IBO" id="M60-AQ-sRL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRy-lM-Byh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74" y="-175"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
+    </resources>
+</document>
