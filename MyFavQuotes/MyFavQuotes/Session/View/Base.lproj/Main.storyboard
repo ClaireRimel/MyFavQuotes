@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HMB-UK-VXr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dbF-LH-y32">
+            <objects>
+                <navigationController id="HMB-UK-VXr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lby-hC-Zig">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RPn-b0-Wbg" kind="relationship" relationship="rootViewController" id="6Ji-sB-b1G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcJ-9Q-h4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-872" y="38"/>
+        </scene>
+        <!--Session View Controller-->
+        <scene sceneID="rMX-pU-qWs">
+            <objects>
+                <viewController id="RPn-b0-Wbg" customClass="SessionViewController" customModule="poto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="70A-2k-9Kb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="8C1-Ci-E5C">
+                                <rect key="frame" x="30" y="292" width="354" height="312"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="LAO-3v-oJu">
+                                        <rect key="frame" x="40" y="0.0" width="274" height="68"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbn-JB-eeS">
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="28"/>
+                                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hNW-RK-ewL">
+                                                <rect key="frame" x="0.0" y="34" width="274" height="34"/>
+                                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="hNW-RK-ewL" secondAttribute="trailing" id="vOV-XL-cJP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hpM-GS-nxD">
+                                        <rect key="frame" x="40" y="133" width="274" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVA-hp-6F3">
+                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="28"/>
+                                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YR0-pp-C6w">
+                                                <rect key="frame" x="0.0" y="36" width="274" height="34"/>
+                                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="YR0-pp-C6w" secondAttribute="trailing" id="NS0-Qn-CdP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQS-Gy-bfL" customClass="RoundButton" customModule="poto" customModuleProvider="target">
+                                        <rect key="frame" x="77" y="268" width="200" height="44"/>
+                                        <color key="backgroundColor" red="0.36396887900000002" green="0.22421401739999999" blue="0.93338888880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="k9c-wT-xRp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="26"/>
+                                        <state key="normal" title="GO">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedGoButton:" destination="RPn-b0-Wbg" eventType="touchUpInside" id="edP-3m-4qa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hpM-GS-nxD" firstAttribute="leading" secondItem="LAO-3v-oJu" secondAttribute="leading" id="Dso-JX-mdf"/>
+                                    <constraint firstItem="LAO-3v-oJu" firstAttribute="leading" secondItem="8C1-Ci-E5C" secondAttribute="leading" constant="40" id="QfZ-ld-3GR"/>
+                                    <constraint firstItem="hpM-GS-nxD" firstAttribute="trailing" secondItem="LAO-3v-oJu" secondAttribute="trailing" id="eWx-jE-6u7"/>
+                                    <constraint firstAttribute="trailing" secondItem="LAO-3v-oJu" secondAttribute="trailing" constant="40" id="rB5-dW-rtV"/>
+                                </constraints>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WTG-Ge-cNp">
+                                <rect key="frame" x="187" y="562" width="40" height="40"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63181918859999997" green="0.3831911087" blue="0.66669273380000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="WTG-Ge-cNp" firstAttribute="centerX" secondItem="70A-2k-9Kb" secondAttribute="centerX" id="371-in-JTd"/>
+                            <constraint firstItem="dh9-Ro-ceb" firstAttribute="trailing" secondItem="8C1-Ci-E5C" secondAttribute="trailing" constant="30" id="DIB-Fv-U0f"/>
+                            <constraint firstItem="8C1-Ci-E5C" firstAttribute="top" secondItem="dh9-Ro-ceb" secondAttribute="top" constant="204" id="FHs-kK-D8c"/>
+                            <constraint firstItem="8C1-Ci-E5C" firstAttribute="leading" secondItem="dh9-Ro-ceb" secondAttribute="leading" constant="30" id="asA-3s-qdN"/>
+                            <constraint firstItem="WTG-Ge-cNp" firstAttribute="centerY" secondItem="nQS-Gy-bfL" secondAttribute="centerY" id="ijt-W9-mNu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dh9-Ro-ceb"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="okp-3t-A4C" appends="YES" id="rKL-NZ-H8D"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bl7-oX-Mcf"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="WTG-Ge-cNp" id="Nl2-jA-j1D"/>
+                        <outlet property="goButton" destination="nQS-Gy-bfL" id="ZAZ-lm-mFW"/>
+                        <outlet property="loginTextField" destination="hNW-RK-ewL" id="TxF-5c-Rju"/>
+                        <outlet property="passwordTexField" destination="YR0-pp-C6w" id="ryS-ar-Tre"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWa-ft-1bz" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="okp-3t-A4C">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="RPn-b0-Wbg" id="lJX-RM-CJg"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-10.144927536231885" y="37.5"/>
+        </scene>
+    </scenes>
+</document>
