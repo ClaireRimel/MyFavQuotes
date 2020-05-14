@@ -8,6 +8,11 @@
 
 import Foundation
 
+extension UserDefaults {
+    
+    static let quotesKey = "UserDefaults.quotesKey"
+}
+
 final class FavQuotesModel {
     let userName: String
     let userToken: String
@@ -44,11 +49,29 @@ final class FavQuotesModel {
         let task = session.dataTask(with: urlRequest, completionHandler: { data, response, error in
             
             if let error = error as NSError? {
-                DispatchQueue.main.async {
-                    then(.failure(.requestError(error)))
+                //No internet connection
+                if error.domain == NSURLErrorDomain
+                    && error.code == -1009 {
+                    
+                    //Verifies if there is any quote's data previously stored
+                    if let data = UserDefaults.standard.data(forKey: UserDefaults.quotesKey),
+                        let decodedData = try? JSONDecoder().decode(QuoteResponse.self, from: data) {
+                        self.quotes = decodedData.quotes
+                        DispatchQueue.main.async {
+                            then(.success(()))
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            then(.failure(.requestError(error)))
+                        }
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        then(.failure(.requestError(error)))
+                    }
                 }
+                return
             }
-            
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
                 //TODO: handle error
                 return
@@ -67,6 +90,8 @@ final class FavQuotesModel {
                 
                 self.quotes = decodedResponse.quotes
                 print(decodedResponse)
+                //Store quotes data for offline access
+                UserDefaults.standard.set(data, forKey: UserDefaults.quotesKey)
                 DispatchQueue.main.async {
                     then(.success(()))
                 }
