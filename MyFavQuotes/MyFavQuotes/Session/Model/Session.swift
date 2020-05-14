@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Session {
+final class Session {
     
     func request(userName: String, password: String, then: @escaping (Result<LoginResponse, ErrorSession>) -> Void) {
         var components = URLComponents()

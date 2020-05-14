@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FavQuotesModel {
+final class FavQuotesModel {
     let userName: String
     let userToken: String
     let cache = NSCache<NSString, NSString>()

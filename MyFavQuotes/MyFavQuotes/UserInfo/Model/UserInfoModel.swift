@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserInfoModel {
+final class UserInfoModel {
     
     let userName: String
     let userToken: String
