@@ -52,6 +52,9 @@
                                                         <state key="normal" title="See FavQs">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="KLk-2O-1NC" kind="show" identifier="FavQuoteSegue" id="Gdj-bz-BAL"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -80,6 +83,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRy-lM-Byh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-74" y="-175"/>
+        </scene>
+        <!--FavQuotesViewController-->
+        <scene sceneID="9iO-Q6-WE2">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="FavQuotesViewController" storyboardName="FavQuotes" referencedIdentifier="FavQuotesViewController" id="KLk-2O-1NC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Hsl-OC-g6M"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RZk-nx-0Qm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550" y="-175"/>
         </scene>
     </scenes>
     <resources>
