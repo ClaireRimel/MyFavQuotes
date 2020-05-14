@@ -62,11 +62,8 @@ final class FavQuotesModel {
                 }
                 return
             }
-            guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
-                //TODO: handle error
-                return
-            }
             
+            let statusCode = (response as! HTTPURLResponse).statusCode
             if statusCode == 200 {
                 //ok
                 guard let data = data,

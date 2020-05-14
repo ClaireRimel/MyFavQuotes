@@ -32,11 +32,7 @@ final class Session {
                 }
             }
             
-            guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
-                //TODO: handle error
-                return
-            }
-            
+            let statusCode = (response as! HTTPURLResponse).statusCode
             if statusCode == 200 {
                 guard let data = data,
                     let decodedResponse = try?
