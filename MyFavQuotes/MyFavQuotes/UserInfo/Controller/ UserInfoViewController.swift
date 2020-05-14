@@ -19,7 +19,7 @@ class UserInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.setGradientBackground(colorOne: Color.lightPink, colorTwo: Color.pink, colorThree: Color.purple)
         nickname.text = model?.userName
         model?.request(then: { (result) in
             switch result {

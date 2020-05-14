@@ -27,7 +27,7 @@
         <!--Session View Controller-->
         <scene sceneID="rMX-pU-qWs">
             <objects>
-                <viewController id="RPn-b0-Wbg" customClass="SessionViewController" customModule="poto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RPn-b0-Wbg" customClass="SessionViewController" customModule="MyFavQuotes" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="70A-2k-9Kb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,7 @@
                                             <constraint firstAttribute="trailing" secondItem="YR0-pp-C6w" secondAttribute="trailing" id="NS0-Qn-CdP"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQS-Gy-bfL" customClass="RoundButton" customModule="poto" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQS-Gy-bfL" customClass="RoundButton" customModule="MyFavQuotes" customModuleProvider="target">
                                         <rect key="frame" x="77" y="268" width="200" height="44"/>
                                         <color key="backgroundColor" red="0.36396887900000002" green="0.22421401739999999" blue="0.93338888880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -118,6 +118,7 @@
                         <outlet property="goButton" destination="nQS-Gy-bfL" id="ZAZ-lm-mFW"/>
                         <outlet property="loginTextField" destination="hNW-RK-ewL" id="TxF-5c-Rju"/>
                         <outlet property="passwordTexField" destination="YR0-pp-C6w" id="ryS-ar-Tre"/>
+                        <segue destination="3ds-kY-Rn1" kind="show" identifier="UserInfoSegue" id="LFn-rT-ubM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWa-ft-1bz" sceneMemberID="firstResponder"/>
@@ -128,6 +129,16 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-10.144927536231885" y="37.5"/>
+        </scene>
+        <!--UserInfoViewController-->
+        <scene sceneID="bRI-EV-HbH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UserInfo" referencedIdentifier="UserInfoViewController" id="3ds-kY-Rn1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6JP-90-jZL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K2j-rr-yJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="38"/>
         </scene>
     </scenes>
 </document>

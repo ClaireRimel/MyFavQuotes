@@ -57,6 +57,18 @@ class SessionViewController: UIViewController {
          goButton.isEnabled = !shown
          goButton.setTitle(goButton.isEnabled ? "GO": "", for: .normal)
      }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "UserInfoSegue" {
+            if let destination = segue.destination as? UserInfoViewController,
+                let result = sender as? LoginResponse {
+                let model = UserInfoModel(userName: result.login, userToken: result.userToken)
+                destination.model = model
+            }
+        }
+    }
 }
 
 extension SessionViewController: UITextFieldDelegate {
