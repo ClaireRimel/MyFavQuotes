@@ -35,7 +35,7 @@ final class FavQuotesModel {
         urlRequest.addValue(userToken, forHTTPHeaderField: "User-Token")
         urlRequest.addValue(#"Token token="6267e30486bb12eabb4736851fdaa299""#, forHTTPHeaderField: "Authorization")
         urlRequest.httpMethod = "GET"
-       
+        
         let task = session.dataTask(with: urlRequest, completionHandler: { data, response, error in
             
             if let error = error as NSError? {
@@ -77,7 +77,6 @@ final class FavQuotesModel {
                             }
                             return
                 }
-                
                 self.quotes = decodedResponse.quotes
                 print(decodedResponse)
                 //Store quotes data for offline access

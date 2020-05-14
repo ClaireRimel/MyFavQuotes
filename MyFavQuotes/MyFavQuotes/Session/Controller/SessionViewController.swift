@@ -23,20 +23,19 @@ class SessionViewController: UIViewController {
         
         loginTextField.delegate = self
         passwordTexField.delegate = self
-
         toggleActivityIndicator(shown: false)
     }
     
     @IBAction func tappedGoButton(_ sender: Any) {
-           toggleActivityIndicator(shown: true)
-    
+        toggleActivityIndicator(shown: true)
+        
         guard let userName = loginTextField.text, let password = passwordTexField.text else {
             return
         }
         
         openSession.request(userName: userName, password: password) { (result) in
             self.toggleActivityIndicator(shown: false)
-
+            
             switch result {
             case let .success(response):
                 self.performSegue(withIdentifier: "UserInfoSegue", sender: response)
@@ -47,16 +46,16 @@ class SessionViewController: UIViewController {
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-         loginTextField.resignFirstResponder()
-         passwordTexField.resignFirstResponder()
-         
-     }
-     
-     private func toggleActivityIndicator(shown: Bool) {
-         activityIndicator.isHidden = !shown
-         goButton.isEnabled = !shown
-         goButton.setTitle(goButton.isEnabled ? "GO": "", for: .normal)
-     }
+        loginTextField.resignFirstResponder()
+        passwordTexField.resignFirstResponder()
+        
+    }
+    
+    private func toggleActivityIndicator(shown: Bool) {
+        activityIndicator.isHidden = !shown
+        goButton.isEnabled = !shown
+        goButton.setTitle(goButton.isEnabled ? "GO": "", for: .normal)
+    }
     
     // MARK: - Navigation
     
@@ -75,7 +74,7 @@ extension SessionViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
-           return false
+        return false
     }
 }
 

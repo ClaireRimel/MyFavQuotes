@@ -9,10 +9,8 @@
 import UIKit
 
 class FavQuotesTableViewCell: UITableViewCell {
-
+    
     @IBOutlet var bodyLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var idLabel: UILabel!
-    
 }
-

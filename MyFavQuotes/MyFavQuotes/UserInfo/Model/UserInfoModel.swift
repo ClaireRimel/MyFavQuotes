@@ -13,7 +13,7 @@ final class UserInfoModel {
     let userName: String
     let userToken: String
     let imageDownloader = DownloadImage()
-
+    
     init(userName: String, userToken: String ) {
         self.userName = userName
         self.userToken = userToken
@@ -30,7 +30,6 @@ final class UserInfoModel {
         urlRequest.addValue(userToken, forHTTPHeaderField: "User-Token")
         urlRequest.httpMethod = "GET"
         
-        //TODO: wrap code inside a Result type for better error handling
         let task = session.dataTask(with: urlRequest, completionHandler: { data, response, error in
             
             if let error = error as NSError? {
@@ -45,7 +44,6 @@ final class UserInfoModel {
             }
             
             if statusCode == 200 {
-                //ok
                 guard let data = data,
                     let decodedResponse = try?
                         JSONDecoder().decode(GetUserResponse.self, from: data) else {
@@ -59,7 +57,6 @@ final class UserInfoModel {
                     then(.success(decodedResponse))
                     print(decodedResponse)
                 }
-                
             } else {
                 guard let data = data,
                     let decodedResponse = try?

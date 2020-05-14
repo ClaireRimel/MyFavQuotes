@@ -51,7 +51,6 @@ final class Session {
                     then(.success(decodedResponse))
                     print(decodedResponse)
                 }
-                
             } else {
                 guard let data = data,
                     let decodedResponse = try?

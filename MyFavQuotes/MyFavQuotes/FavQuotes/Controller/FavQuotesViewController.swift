@@ -15,7 +15,7 @@ class FavQuotesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Color.purple
-
+        
         model?.request(then: { (result) in
             switch result {
             case .success:
@@ -37,7 +37,7 @@ class FavQuotesViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-       guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavQuotesTablesViewCell", for: indexPath) as? FavQuotesTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavQuotesTablesViewCell", for: indexPath) as? FavQuotesTableViewCell else {
             return UITableViewCell()
         }
         

@@ -41,13 +41,13 @@ class UserInfoViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if segue.identifier == "FavQuoteSegue" {
-             if let destination = segue.destination as? FavQuotesViewController,
-                 let username = model?.userName,
-                 let userToken = model?.userToken {
-                 let model = FavQuotesModel(userName: username , userToken: userToken)
-                 destination.model = model
-             }
-         }
-     }
+        if segue.identifier == "FavQuoteSegue" {
+            if let destination = segue.destination as? FavQuotesViewController,
+                let username = model?.userName,
+                let userToken = model?.userToken {
+                let model = FavQuotesModel(userName: username , userToken: userToken)
+                destination.model = model
+            }
+        }
+    }
 }
