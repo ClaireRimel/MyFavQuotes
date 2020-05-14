@@ -11,15 +11,7 @@ import Foundation
 final class Session {
     
     func request(userName: String, password: String, then: @escaping (Result<LoginResponse, ErrorSession>) -> Void) {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = "favqs.com"
-        components.path = "/api/session"
-        
-        //Gets URL object based on given components
-        let url = components.url!
-        
-        //create the session object
+        let url = URLConstructor.getURL(for: .session)
         let session = URLSession.shared
         
         //now create the URLRequest object using the url object

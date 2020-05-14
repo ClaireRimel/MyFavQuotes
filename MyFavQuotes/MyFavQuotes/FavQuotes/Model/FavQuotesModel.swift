@@ -26,17 +26,7 @@ final class FavQuotesModel {
     }
     
     func request(then: @escaping (Result<Void, ErrorSession>) -> Void) {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = "favqs.com"
-        components.path = "/api/quotes"
-        components.queryItems = [URLQueryItem(name: "filter", value: userName),
-        URLQueryItem(name: "type", value: "user")]
-        
-        //Gets URL object based on given components
-        let url = components.url!
-        
-        //create the session object
+        let url = URLConstructor.getURL(for: .quotes(userName: userName))
         let session = URLSession.shared
         
         //now create the URLRequest object using the url object

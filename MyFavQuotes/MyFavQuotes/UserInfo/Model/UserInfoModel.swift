@@ -20,15 +20,7 @@ final class UserInfoModel {
     }
     
     func request(then: @escaping (Result<GetUserResponse, ErrorSession>) -> Void) {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = "favqs.com"
-        components.path = "/api/users/\(userName)"
-        
-        //Gets URL object based on given components
-        let url = components.url!
-        
-        //create the session object
+        let url = URLConstructor.getURL(for: .users(userName: userName))
         let session = URLSession.shared
         
         //now create the URLRequest object using the url object
